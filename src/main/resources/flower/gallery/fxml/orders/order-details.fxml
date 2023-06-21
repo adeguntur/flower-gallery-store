@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXLabel?>
+<?import io.github.palexdev.materialfx.controls.MFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@../../styles/side-panel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flower.gallery.orders.orderDetailsController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="500.0">
+            <children>
+            <Label prefHeight="46.0" prefWidth="150.0" text="ORDER DETAILS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="46.0" prefWidth="300.0" />
+            <Button mnemonicParsing="false" onAction="#close" styleClass="topClose">
+               <graphic>
+                  <FontIcon iconColor="RED" iconLiteral="cil-yen" iconSize="20" styleClass="topClose" />
+               </graphic>
+            </Button>
+            </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+        </HBox>
+        <VBox fx:id="infoContainerVBox" minWidth="500.0" prefHeight="555.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="500.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" minHeight="50.0" prefHeight="51.0" prefWidth="88.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="60.0" text="Order Date:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="orderDate" alignment="CENTER" labelStyle="STYLE2" maxWidth="100.0" prefHeight="35.0" prefWidth="100.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" minHeight="50.0" prefWidth="48.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="60.0" text="Order ID:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="orderId" alignment="CENTER" labelStyle="STYLE2" prefHeight="35.0" prefWidth="118.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="72.0" prefWidth="500.0" spacing="10.0">
+               <children>
+                  <VBox minHeight="50.0" prefWidth="150.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="165.0" text="Customer Name:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="cusName" alignment="CENTER" labelStyle="STYLE2" prefHeight="35.0" prefWidth="170.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+                  <VBox minHeight="50.0" prefWidth="120.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="122.0" text="Employee Name:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="empName" alignment="CENTER" labelStyle="STYLE2" prefHeight="35.0" prefWidth="136.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <VBox>
+               <children>
+                  <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="78.0" text="Items">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </MFXLabel>
+                  <VBox>
+                     <children>
+                        <MFXListView fx:id="mfxList" depthLevel="LEVEL1" hideScrollBars="true" prefHeight="302.0" prefWidth="538.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" spacing="20.0">
+               <children>
+                  <VBox prefHeight="62.0" prefWidth="82.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="99.0" text="Sub Total:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="subTotal" alignment="CENTER" labelStyle="STYLE2" prefHeight="35.0" prefWidth="124.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="62.0" prefWidth="67.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="100.0" text="Discount:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="discount" alignment="CENTER" labelStyle="STYLE2" prefHeight="35.0" prefWidth="121.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="62.0" prefWidth="58.0">
+                     <children>
+                        <MFXLabel labelStyle="STYLE1" prefHeight="27.0" prefWidth="104.0" text="Total:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXLabel>
+                        <MFXLabel fx:id="total" alignment="CENTER" labelStyle="STYLE2" prefHeight="35.0" prefWidth="122.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXLabel>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+        </VBox>
+    </children>
+</VBox>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Successfully written to database</comment>
+<entry key="writeToDb">2023-06-16</entry>
+</properties>
